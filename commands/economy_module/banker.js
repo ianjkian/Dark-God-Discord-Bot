@@ -6,15 +6,6 @@ const fs = require('fs');
 module.exports = class BankerCommand extends Command {
   constructor(client) {
     super(client, {
-      name: 'banker',
-      aliases: ['managebal', 'managemoney', 'managebank', 'bankcontrol'],
-      group: 'economy',
-      memberName: 'banker',
-      description: 'Manage the bank.',
-      details: oneLine`
-      This command manages a user's economy entry.
-      Useful for if a user had a failed transaction or something glitched.
-      Use in moderation and DO NOT use as a means of abusing Discoin.
 			`,
       examples: ['banker @Bob#1234 bal give 100'],
       args: [{
@@ -174,3 +165,14 @@ module.exports = class BankerCommand extends Command {
     fs.unlinkSync('./db.lock');
   }
 };
+module.exports.help == {
+	      name: 'banker',
+      aliases: ['managebal', 'managemoney', 'managebank', 'bankcontrol'],
+      group: 'economy',
+      memberName: 'banker',
+      description: 'Manage the bank.',
+      details: oneLine`
+      This command manages a user's economy entry.
+      Useful for if a user had a failed transaction or something glitched.
+      Use in moderation and DO NOT use as a means of abusing Discoin.
+{
